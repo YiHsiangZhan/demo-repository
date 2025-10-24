@@ -1,0 +1,7 @@
+Included files:
+- /mnt/data/AI演算.txt (16290 bytes)
+- /mnt/data/EIAI D-Link 最強專員疑難雜症處理專家 v2.0 (1).txt (16108 bytes)
+- /mnt/data/FiveD_Iii_Master_v1.docx (41526 bytes)
+- /mnt/data/AI大腦.docx (180861 bytes)
+- /mnt/data/衡諦12維度.txt (2512 bytes)
+- /mnt/data/方舟核心 v2.0 - 創世版(可改成siri) (212035 bytes)
