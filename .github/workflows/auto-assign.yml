@@ -17,5 +17,5 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: YiHsiangZhan
           numOfAssignee: 9999999
-- name: action-github-app-token
+- name: github-workflows-CI/CD
   uses: getsentry/action-github-app-token@v3.0.0
