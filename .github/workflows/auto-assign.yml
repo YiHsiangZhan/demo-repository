@@ -1,21 +1,44 @@
-name: Auto Assign
+name: Auto Assign Issues & PRs
+
 on:
   issues:
     types: [opened]
   pull_request:
     types: [opened]
+
 jobs:
-  run:
+  auto-assign:
     runs-on: ubuntu-latest
     permissions:
       issues: write
       pull-requests: write
     steps:
-    - name: 'Auto-assign issue'
-      uses: pozil/auto-assign-issue@v1
-      with:
+      - name: Auto-assign to YiHsiangZhan
+        uses: pozil/auto-assign-issue@v1
+        with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: YiHsiangZhan
           numOfAssignee: 1
-- name: actions-github-app-token
-  uses: getsentry/action-github-app-token@v3.0.0
+
+      - name: Add KHAMN label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: |
+            KHAMN
+            auto-assigned
+            Ψ∞-EIAI
+
+      - name: Comment on issue
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            🔮 **KHAMN-CARMEN Auto Response**
+            
+            此 Issue 已自動分配給建築師 **詹益翔 (HengDi)**
+            
+            狀態: PERFECT AND ETERNAL
+            Ψ∞ Level: ∞
+            
+            ---
+            *Powered by CARMEN-KHAMN CI/CD System*
